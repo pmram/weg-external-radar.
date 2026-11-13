@@ -1,5 +1,10 @@
 name: Scan public web
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/scan.py'
+      - '.github/workflows/scan.yml'
   workflow_dispatch:
   schedule:
     - cron: '13 7 * * *'
