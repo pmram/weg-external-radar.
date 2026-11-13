@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated_at": "2026-11-13T20:32:47.297607+00:00",
+  "updated_at": "2026-11-13T20:32:48.716918+00:00",
   "provider": "crt.sh + DNS/HTTP (gratuito)",
   "notice": "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. Isso não confirma que tenham aparência oficial nem que sejam fraudulentos. Redirecionamentos e sites inacessíveis ficam separados.",
   "checked_queries": 5,
