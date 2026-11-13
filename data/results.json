@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "updated_at": "2026-11-13T19:56:05.554036+00:00",
+  "updated_at": null,
   "provider": "Não configurado",
-  "notice": "Configura BRAVE_SEARCH_API_KEY em GitHub Actions Secrets para ativar a pesquisa. Não são usadas notícias como alternativa.",
+  "notice": "Aguarda uma recolha com BRAVE_SEARCH_API_KEY. O histórico de notícias foi removido.",
   "checked_queries": 0,
   "results": [],
   "errors": []
