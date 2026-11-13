@@ -11,11 +11,16 @@ from html.parser import HTMLParser
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from check_sites import public_addresses, PinnedHTTP, PinnedHTTPS, TIMEOUT
 
-MAX_BYTES = 128 * 1024
+MAX_BYTES = 512 * 1024
 # Electric motors in commonly used WEG markets. Avoid broad standalone 'motor'
 # (it also means engine) and 'weg' (German: way).
 MOTOR_TERMS = [
     ("electric motors", r"\belectric\s+motors?\b"),
+    ("WEG motors", r"\bweg[\s-]+motors?\b"),
+    ("WEG motores", r"\bweg[\s-]+motores?\b"),
+    ("low/high voltage motors", r"\b(?:low|high|medium)[- ]voltage\s+motors?\b"),
+    ("AC/DC motors", r"\b(?:ac|dc)[- ]motors?\b"),
+    ("motor control", r"\bmotor\s+(?:control|starter|drives?|protection)\b"),
     ("industrial motors", r"\bindustrial\s+motors?\b"),
     ("three-phase motor", r"\b(?:three[- ]phase|3[- ]phase)\s+motors?\b"),
     ("induction motor", r"\binduction\s+motors?\b"),
@@ -99,7 +104,7 @@ def inspect(host, checked_url):
             return {"motor_status": "Não verificado", "motor_terms": [], "motor_detail": "Conteúdo não HTML"}
         content_length = response.getheader("Content-Length")
         if content_length and content_length.isdigit() and int(content_length) > MAX_BYTES:
-            return {"motor_status": "Não verificado", "motor_terms": [], "motor_detail": "HTML excede 128 KB"}
+            return {"motor_status": "Não verificado", "motor_terms": [], "motor_detail": "HTML excede 512 KB"}
         data = response.read(MAX_BYTES + 1)
         if len(data) > MAX_BYTES:
             return {"motor_status": "Não verificado", "motor_terms": [], "motor_detail": "HTML excede 128 KB"}
