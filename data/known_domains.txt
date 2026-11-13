@@ -1,0 +1,3 @@
+# Domínios externos identificados para verificar em cada recolha
+# Não implica que sejam fraudulentos ou ativos
+weg-connect.kz
