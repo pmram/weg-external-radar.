@@ -10,6 +10,9 @@ Ferramenta OSINT gratuita para **descobrir domínios** que possam aparentar ser 
 - **Histórico**: retém domínios descobertos nos ciclos anteriores.
 - Todas as extensões e países são elegíveis; não há filtro geográfico.
 - Validação técnica DNS + HTTP/HTTPS (IP público, sem seguir redirecionamentos, com limite de simultaneidade).
+- **Verificação de conteúdo:** para sites com HTTP 2xx, descarrega no máximo 128 KB do HTML inicial, remove scripts/estilos e procura referências multilingues explícitas a motores elétricos (português, inglês, espanhol, francês, alemão, italiano, russo, cazaque, chinês, turco e outras variantes). Não executa JavaScript nem segue links.
+- Dashboard abre por defeito em **Com referências a motores**, com alternativas para todos os ativos e outros estados. 
+- Os estados de conteúdo são `Referências a motores`, `Indício fraco`, `Sem referências` e `Não verificado`.
 - Até 140 verificações HTTP por execução, com lote em rotação e prioridades para as sementes. Os restantes mantêm-se em "Não verificado".
 - Sem chave Brave, sem pagamentos de API. Sujeito a disponibilidade, quotas, limites de GitHub e fontes públicas.
 
@@ -27,6 +30,8 @@ O CT anterior usava poucos padrões, entre eles `weg-connect%` (domínio indicad
 ## Interpretação
 
 - **Ativo:** resposta HTTP 2xx; não demonstra que a página corresponde à marca.
+- **Referências a motores:** termos encontrados no HTML inicial; aumenta a relevância para revisão, mas não comprova falsificação.
+- **Sem referências:** não foram encontrados termos no trecho analisado; conteúdo gerado por JS, páginas secundárias e outros idiomas podem originar falsos negativos.
 - **Redireciona:** HTTP 3xx não seguido, destino não verificado.
 - **Acesso restrito:** HTTP 401/403.
 - **Inacessível:** ligação ou DNS falhou a partir do runner.
