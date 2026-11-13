@@ -1,224 +1,431 @@
 {
-  "version": 2,
-  "updated_at": "2026-11-13T20:22:54.183855+00:00",
-  "provider": "crt.sh (Certificate Transparency) · gratuito",
-  "notice": "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, podem estar inativos ou pertencer a parceiros legítimos. Nenhum website candidato foi visitado. Algumas consultas falharam; os resultados podem estar incompletos.",
-  "checked_queries": 4,
+  "version": 3,
+  "updated_at": "2026-11-13T20:32:47.297607+00:00",
+  "provider": "crt.sh + DNS/HTTP (gratuito)",
+  "notice": "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. Isso não confirma que tenham aparência oficial nem que sejam fraudulentos. Redirecionamentos e sites inacessíveis ficam separados.",
+  "checked_queries": 5,
   "results": [
+    {
+      "domain": "wegenergy.com",
+      "url": "https://wegenergy.com/",
+      "title": "wegenergy.com",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
+      "query": "Certificate Transparency",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegenergy.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
     {
       "domain": "wegmotor.cn",
       "url": "https://wegmotor.cn/",
       "title": "wegmotor.cn",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegmotor.hu",
-      "url": "https://wegmotor.hu/",
-      "title": "wegmotor.hu",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegmotor.cn/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
     },
     {
       "domain": "wegmotor.liuti.cn",
       "url": "https://wegmotor.liuti.cn/",
       "title": "wegmotor.liuti.cn",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegmotores.com",
-      "url": "https://wegmotores.com/",
-      "title": "wegmotores.com",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegmotoreselectricos.com.ar",
-      "url": "https://wegmotoreselectricos.com.ar/",
-      "title": "wegmotoreselectricos.com.ar",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegmotorposter.nl",
-      "url": "https://wegmotorposter.nl/",
-      "title": "wegmotorposter.nl",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegmotors.cn",
-      "url": "https://wegmotors.cn/",
-      "title": "wegmotors.cn",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegmotor.liuti.cn/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
     },
     {
       "domain": "wegmotors.co.za",
       "url": "https://wegmotors.co.za/",
       "title": "wegmotors.co.za",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegmotors.co.za/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
     },
     {
       "domain": "wegmotors.com",
       "url": "https://wegmotors.com/",
       "title": "wegmotors.com",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegmotors.ir",
-      "url": "https://wegmotors.ir/",
-      "title": "wegmotors.ir",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegmotors.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
     },
     {
       "domain": "wegmotors.ru",
       "url": "https://wegmotors.ru/",
       "title": "wegmotors.ru",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegmotors.ru/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
     },
     {
       "domain": "wegmotorsales.com",
       "url": "https://wegmotorsales.com/",
       "title": "wegmotorsales.com",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegmotorsales.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegportaluat.powerappsportals.com",
+      "url": "https://wegportaluat.powerappsportals.com/",
+      "title": "wegportaluat.powerappsportals.com",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
       "query": "Certificate Transparency",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegportaluat.powerappsportals.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    }
+  ],
+  "unreachable": [
+    {
+      "domain": "weg-connect.kz",
+      "url": "https://weg-connect.kz/",
+      "title": "weg-connect.kz",
+      "description": "",
+      "source": "Semente de descoberta",
+      "query": "Domínio conhecido",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegmotores.com",
+      "url": "https://wegmotores.com/",
+      "title": "wegmotores.com",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegmotoreselectricos.com.ar",
+      "url": "https://wegmotoreselectricos.com.ar/",
+      "title": "wegmotoreselectricos.com.ar",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegmotorposter.nl",
+      "url": "https://wegmotorposter.nl/",
+      "title": "wegmotorposter.nl",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
     },
     {
       "domain": "wegmotorscan.com",
       "url": "https://wegmotorscan.com/",
       "title": "wegmotorscan.com",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegportal.selta-immo.de",
+      "url": "https://wegportal.selta-immo.de/",
+      "title": "wegportal.selta-immo.de",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
       "query": "Certificate Transparency",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegportalen.nl",
+      "url": "https://wegportalen.nl/",
+      "title": "wegportalen.nl",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
+      "query": "Certificate Transparency",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "https: ConnectionResetError; http: TimeoutError"
+    },
+    {
+      "domain": "wegenergybodrum.com",
+      "url": "https://wegenergybodrum.com/",
+      "title": "wegenergybodrum.com",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
+      "query": "Certificate Transparency",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "http://wegenergybodrum.com/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegmotor.hu",
+      "url": "https://wegmotor.hu/",
+      "title": "wegmotor.hu",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wegmotor.hu/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegmotors.cn",
+      "url": "https://wegmotors.cn/",
+      "title": "wegmotors.cn",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wegmotors.cn/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegmotors.ir",
+      "url": "https://wegmotors.ir/",
+      "title": "wegmotors.ir",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wegmotors.ir/",
+      "check_detail": "HTTP redireciona; destino não verificado"
     },
     {
       "domain": "wegmotory.cz",
       "url": "https://wegmotory.cz/",
       "title": "wegmotory.cz",
       "description": "",
-      "source": "crt.sh · Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegmotory.cz/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegportal.wohnbau-service.de",
+      "url": "https://wegportal.wohnbau-service.de/",
+      "title": "wegportal.wohnbau-service.de",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
       "query": "Certificate Transparency",
       "score": 55,
       "priority": "Média",
       "signals": [
         "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
       ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegportal.wohnbau-service.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegportal24.de",
+      "url": "https://wegportal24.de/",
+      "title": "wegportal24.de",
+      "description": "",
+      "source": "crt.sh (Certificate Transparency)",
+      "query": "Certificate Transparency",
+      "score": 55,
+      "priority": "Média",
+      "signals": [
+        "O endereço começa por WEG e um termo comercial",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 308,
+      "checked_url": "https://wegportal24.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
     }
   ],
-  "errors": [
-    "crt.sh (%.weg.%): HTTPError: HTTP Error 502: Bad Gateway",
-    "crt.sh (%weg-%): HTTPError: HTTP Error 502: Bad Gateway",
-    "crt.sh (wegenergy%): HTTPError: HTTP Error 502: Bad Gateway"
-  ]
+  "errors": []
 }
