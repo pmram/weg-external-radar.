@@ -145,12 +145,12 @@ def assess(item: dict) -> dict | None:
 
 def ct_candidates():
     """Public crt.sh certificate-transparency search; no API key or target probing."""
-    patterns = ["%.weg.%", "%weg-%", "wegmotor%", "wegenergy%", "weg-connect%", "%weg-connect%", "wegportal%", "wegservice%"]
+    patterns = ["%.weg.%", "wegmotor%", "wegenergy%", "weg-connect%", "wegportal%"]
     for pattern in patterns:
         endpoint = "https://crt.sh/?q=" + quote(pattern, safe="") + "&output=json"
         headers = {"User-Agent": "WEG-Brand-Monitor/3.0 (passive CT discovery)", "Accept": "application/json"}
         try:
-            with urlopen(Request(endpoint, headers=headers), timeout=50) as response:
+            with urlopen(Request(endpoint, headers=headers), timeout=16) as response:
                 # Bound memory; crt.sh can return very large data sets.
                 raw = response.read(12_000_001)
                 if len(raw) > 12_000_000:
@@ -222,7 +222,7 @@ def main() -> None:
 
     # Keep scan bounded and prioritize known seeds + highest hostname confidence.
     seeds = set(x["url"].split("/")[2] for x in sources if x.get("query") == "Domínio conhecido")
-    ordered = sorted(candidates, key=lambda h: (h not in seeds, -candidates[h]["score"], h))[:100]
+    ordered = sorted(candidates, key=lambda h: (h not in seeds, -candidates[h]["score"], h))[:65]
     candidates = {host: candidates[host] for host in ordered}
     check_all(candidates)
 
@@ -252,7 +252,7 @@ def main() -> None:
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "provider": "crt.sh + DNS/HTTP (gratuito)",
         "notice": notice,
-        "checked_queries": 8,
+        "checked_queries": 5,
         "results": active,
         "unreachable": inactive,
         "errors": errors,
