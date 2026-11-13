@@ -35,6 +35,6 @@ jobs:
           git add data/results.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh WEG domain candidates'
-            git pull --rebase origin main
+            git -c rebase.autoStash=true pull --rebase -X theirs origin main
             git push
           fi
