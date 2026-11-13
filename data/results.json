@@ -1,40 +1,10 @@
 {
   "version": 2,
-  "updated_at": "2026-11-13T20:21:22.535470+00:00",
+  "updated_at": "2026-11-13T20:22:54.183855+00:00",
   "provider": "crt.sh (Certificate Transparency) · gratuito",
-  "notice": "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, podem estar inativos ou pertencer a parceiros legítimos. Nenhum website candidato foi visitado.",
+  "notice": "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, podem estar inativos ou pertencer a parceiros legítimos. Nenhum website candidato foi visitado. Algumas consultas falharam; os resultados podem estar incompletos.",
   "checked_queries": 4,
   "results": [
-    {
-      "domain": "wegenergy.com",
-      "url": "https://wegenergy.com/",
-      "title": "wegenergy.com",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "wegenergybodrum.com",
-      "url": "https://wegenergybodrum.com/",
-      "title": "wegenergybodrum.com",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço começa por WEG e um termo comercial",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
     {
       "domain": "wegmotor.cn",
       "url": "https://wegmotor.cn/",
@@ -246,5 +216,9 @@
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
     }
   ],
-  "errors": []
+  "errors": [
+    "crt.sh (%.weg.%): HTTPError: HTTP Error 502: Bad Gateway",
+    "crt.sh (%weg-%): HTTPError: HTTP Error 502: Bad Gateway",
+    "crt.sh (wegenergy%): HTTPError: HTTP Error 502: Bad Gateway"
+  ]
 }
