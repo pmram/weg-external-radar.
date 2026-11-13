@@ -1,24 +1,33 @@
 # WEG Radar — Brand Impersonation Watch
 
-Passive discovery of **potential WEG brand impersonation domains**, rather than websites that merely mention WEG.
+Monitorização **gratuita**, passiva e preliminar de domínios que possam imitar a WEG. Não pesquisa notícias.
 
-## What qualifies as a candidate
-- A non-allowlisted hostname incorporating `WEG` or a few defined lookalike spellings.
-- Additional ranking signals from the indexed title/snippet (claims of being an official channel, authentication, payment, or account prompts).
-- Domain-based deduplication and a human-review priority score.
+## Fontes e custos
+- **crt.sh** — consultas públicas aos registos de Certificate Transparency (CT); não necessita de chave de API.
+- **GitHub Actions + GitHub Pages** — recolha diária e publicação estática, sujeitos aos limites do plano GitHub e à disponibilidade do serviço.
+- **Não necessita de Brave, subscrições ou APIs pagas.**
 
-**Candidate ≠ confirmed malicious.** Partners, distributors and legitimate independent sites can be flagged.
+## Como funciona
+1. Consulta registos públicos de certificados emitidos para nomes que contenham `weg`.
+2. Exclui `weg.net`, os seus subdomínios e outros domínios expressamente confiáveis.
+3. Filtra nomes de notícias, redes sociais e outros sites irrelevantes.
+4. Classifica candidatos segundo semelhança do nome do domínio. A prioridade máxima nesta modalidade é **Média**.
+5. Apresenta o domínio e sinais de triagem no dashboard. Os URLs são **inferidos** a partir dos nomes encontrados nos certificados e **não foram visitados/confirmados**.
 
-## Configuration
-1. In repository **Settings → Pages**, use **GitHub Actions** as source.
-2. In **Settings → Secrets and variables → Actions**, add a **BRAVE_SEARCH_API_KEY** repository secret (required to search).
-3. Optionally set a variable `TRUSTED_DOMAINS` as a comma-separated allowlist of **verified** official company domains, e.g. `example.org,example.net`. Only add domains confirmed as owned or explicitly authorised by WEG.
-4. Run **Actions → Scan public web → Run workflow** to refresh. Subsequent scans run daily at 07:13 UTC.
-5. View the dashboard at https://pmram.github.io/weg-external-radar./
+**Um certificado não prova que o site esteja ativo ou seja fraudulento.** Pode tratar-se de um distribuidor legítimo, um certificado antigo ou um nome não utilizado. É obrigatória validação humana antes de qualquer ação.
 
-The app does not use Google News. Without API credentials it will report that collection is disabled; it does not present news as suspicious websites.
+## Configuração
+1. Confirmar **Settings → Pages → Source: GitHub Actions**.
+2. Abrir **Actions → Scan public web → Run workflow** para uma pesquisa manual.
+3. A execução automática ocorre diariamente às 07:13 UTC.
+4. Abrir https://pmram.github.io/weg-external-radar./
+5. Opcional: em **Settings → Secrets and variables → Actions → Variables** criar `TRUSTED_DOMAINS` com lista de domínios oficiais verificados, separados por vírgulas.
 
-## Scope and limitations
-This is a **passive OSINT heuristic**: it searches only publicly indexed results and scores URL hostnames and snippets. It does not visit candidate pages, inspect screenshots, assess DNS ownership, verify domain registrations, analyze login forms or detect all typosquats. It can miss sites not indexed by Brave. Manual verification is necessary before incident response, takedown requests, or labeling any site malicious.
+Não é necessário criar nem configurar `BRAVE_SEARCH_API_KEY`.
 
-Only `weg.net` and its subdomains are excluded by default as WEG-owned; other legitimate WEG properties should be added to `TRUSTED_DOMAINS` after verification.
+## Limitações
+- CT cobre nomes que apareceram em certificados públicos, não a totalidade da Internet.
+- O serviço crt.sh pode estar temporariamente lento, indisponível ou limitar respostas grandes.
+- Esta versão não confirma conteúdo, formulários, aparência gráfica, resolução DNS, atividade do site, proprietário ou intenção maliciosa.
+- A triagem não deteta toda a variedade de typosquatting.
+- A recolha é executada nas Actions, não no browser do visitante.
