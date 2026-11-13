@@ -9,10 +9,12 @@ import html
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 from check_sites import check_all
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -145,17 +147,30 @@ def assess(item: dict) -> dict | None:
 
 def ct_candidates():
     """Public crt.sh certificate-transparency search; no API key or target probing."""
-    patterns = ["%.weg.%", "wegmotor%", "wegenergy%", "weg-connect%", "wegportal%"]
+    patterns = [
+        "weg-%", "wegsolut%", "weg-solut%", "wegconnect%", "weg-connect%",
+        "wegmotor%", "wegmotors%", "wegmotores%", "wegenergy%", "wegportal%",
+        "wegservice%", "weg-electric%", "wegofficial%", "%.weg.%"
+    ]
+    # Rotate secondary patterns to limit shared-public-service load while
+    # guaranteeing broad WEG hyphen and solutions patterns every day.
+    primary = patterns[:5]
+    secondary = patterns[5:]
+    day = datetime.now(timezone.utc).timetuple().tm_yday
+    start = (day * 4) % len(secondary)
+    patterns = primary + [secondary[(start + i) % len(secondary)] for i in range(4)]
     for pattern in patterns:
         endpoint = "https://crt.sh/?q=" + quote(pattern, safe="") + "&output=json"
         headers = {"User-Agent": "WEG-Brand-Monitor/3.0 (passive CT discovery)", "Accept": "application/json"}
         try:
-            with urlopen(Request(endpoint, headers=headers), timeout=16) as response:
+            with urlopen(Request(endpoint, headers=headers), timeout=22) as response:
                 # Bound memory; crt.sh can return very large data sets.
                 raw = response.read(12_000_001)
                 if len(raw) > 12_000_000:
                     raise ValueError("crt.sh response exceeded 12 MB")
                 records = json.loads(raw)
+                if not isinstance(records, list):
+                    raise ValueError('Unexpected CT response')
             for row in records:
                 for name in (row.get("name_value") or "").splitlines():
                     host = name.strip().lower().rstrip(".")
@@ -168,6 +183,41 @@ def ct_candidates():
                            "source": "crt.sh"}
         except Exception as exc:
             yield {"error": f"crt.sh ({pattern}): {type(exc).__name__}: {exc}"}
+        time.sleep(0.6)
+
+def urlscan_candidates():
+    """Search existing publicly shared URLScan snapshots.
+
+    Keyless queries have strict quotas. This is not a bulk mirror or scan
+    submission. Results may be historic and do not confirm current activity.
+    """
+    queries = ["page.domain.keyword:weg*", "page.domain.keyword:weg-*",
+               "page.domain:weg-solutions.kz"]
+    for query in queries:
+        endpoint = "https://urlscan.io/api/v1/search/?q=" + quote(query, safe="") + "&size=100"
+        headers = {"Accept": "application/json", "User-Agent": "WEG-Brand-Radar/4.0"}
+        try:
+            with urlopen(Request(endpoint, headers=headers), timeout=18) as response:
+                data = json.load(response)
+            for entry in data.get("results", []):
+                page = entry.get("page") or {}
+                task = entry.get("task") or {}
+                domain = page.get("domain") or task.get("domain") or ""
+                host = hostname("https://" + str(domain) + "/")
+                if not host:
+                    continue
+                yield {
+                    "url": "https://" + host + "/",
+                    "title": clean(page.get("title") or host),
+                    "description": "",
+                    "query": query,
+                    "source": "urlscan.io (public historical scan)"
+                }
+        except HTTPError as exc:
+            yield {"error": f"urlscan ({query}): HTTP {exc.code} (quota or unavailable)"}
+        except Exception as exc:
+            yield {"error": f"urlscan ({query}): {type(exc).__name__}: {exc}"}
+        time.sleep(0.5)
 
 def seed_candidates():
     """Operator-supplied names are discovery hints, never automatically marked active."""
@@ -208,28 +258,40 @@ def main() -> None:
             item["source"] = raw["source"]
             candidates[item["domain"]] = item
 
-    for raw in ct_candidates():
+    for raw in list(urlscan_candidates()) + list(ct_candidates()):
         if "error" in raw:
             errors.append(raw["error"])
             continue
         names_processed += 1
         item = assess(raw)
         if item:
-            item["source"] = "crt.sh (Certificate Transparency)"
+            item["source"] = raw.get("source", "crt.sh (Certificate Transparency)")
             prior = candidates.get(item["domain"])
             if not prior or item["score"] > prior["score"]:
                 candidates[item["domain"]] = item
 
-    # Keep scan bounded and prioritize known seeds + highest hostname confidence.
-    seeds = set(x["url"].split("/")[2] for x in sources if x.get("query") == "Domínio conhecido")
-    ordered = sorted(candidates, key=lambda h: (h not in seeds, -candidates[h]["score"], h))[:65]
-    candidates = {host: candidates[host] for host in ordered}
-    check_all(candidates)
+    # Enforce a bounded global check, while rotating through additional candidates.
+    # Retain previously seen domains rather than discarding everything past a cap.
+    seeds = {x["url"].split("/")[2] for x in sources if x.get("query") == "Domínio conhecido"}
+    all_ordered = sorted(candidates, key=lambda h: (h not in seeds, -candidates[h]["score"], h))
+    max_checks = 140
+    fixed = [h for h in all_ordered if h in seeds][:20]
+    others = [h for h in all_ordered if h not in fixed]
+    rotation = datetime.now(timezone.utc).timetuple().tm_yday % max(1, len(others))
+    rotated = others[rotation:] + others[:rotation]
+    selected = fixed + rotated[:max_checks - len(fixed)]
+    to_check = {h: candidates[h] for h in selected}
+    check_all(to_check)
+    for host, item in candidates.items():
+        if host not in to_check:
+            item.update(site_status="Não verificado", http_status=None, checked_url=None,
+                        check_detail="Não incluído no lote diário; aguarda próxima verificação")
 
     active, inactive = [], []
     for item in candidates.values():
         item["status"] = "Requer validação humana"
-        item["signals"].append("Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo")
+        if item["site_status"] != "Não verificado":
+            item["signals"].append("Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo")
         item["priority"] = "Média" if item["score"] >= 50 else "Baixa"
         item["score"] = min(item["score"], 65)
         if item["site_status"] == "Ativo":
@@ -250,9 +312,11 @@ def main() -> None:
     result = {
         "version": 3,
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "provider": "crt.sh + DNS/HTTP (gratuito)",
+        "provider": "crt.sh + urlscan.io público + DNS/HTTP (gratuito)",
         "notice": notice,
-        "checked_queries": 5,
+        "checked_queries": 12,
+        "total_candidates": len(candidates),
+        "checked_count": len(to_check),
         "results": active,
         "unreachable": inactive,
         "errors": errors,
