@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Passive discovery of WEG lookalike domains in search engine results.
+"""Passive discovery of potential WEG lookalike domains using free CT logs.
 
 No target-site crawling, login, authentication attempts or malware execution.
 Candidates are NOT confirmed phishing websites.
@@ -9,7 +9,6 @@ import html
 import json
 import os
 import re
-import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlparse
@@ -139,60 +138,76 @@ def assess(item: dict) -> dict | None:
         "status": "Requer validação humana",
     }
 
-def brave_search(query: str, api_key: str):
-    url = (
-        "https://api.search.brave.com/res/v1/web/search?q="
-        + quote(query) + "&count=20"
-    )
-    headers = {
-        "Accept": "application/json",
-        "X-Subscription-Token": api_key,
-        "User-Agent": "WEG-Brand-Monitor/2.0",
-    }
-    with urlopen(Request(url, headers=headers), timeout=30) as response:
-        payload = json.load(response)
-    for hit in payload.get("web", {}).get("results", []):
-        yield {
-            "url": hit.get("url", ""),
-            "title": hit.get("title", ""),
-            "description": hit.get("description", ""),
-            "query": query,
-        }
+def ct_candidates():
+    """Public crt.sh certificate-transparency search; no API key or target probing."""
+    patterns = ["%.weg.%", "%weg-%", "wegmotor%", "wegenergy%"]
+    for pattern in patterns:
+        endpoint = "https://crt.sh/?q=" + quote(pattern, safe="") + "&output=json"
+        headers = {"User-Agent": "WEG-Brand-Monitor/3.0 (passive CT discovery)", "Accept": "application/json"}
+        try:
+            with urlopen(Request(endpoint, headers=headers), timeout=50) as response:
+                # Bound memory; crt.sh can return very large data sets.
+                raw = response.read(12_000_001)
+                if len(raw) > 12_000_000:
+                    raise ValueError("crt.sh response exceeded 12 MB")
+                records = json.loads(raw)
+            for row in records:
+                for name in (row.get("name_value") or "").splitlines():
+                    host = name.strip().lower().rstrip(".")
+                    if host.startswith("*."):
+                        host = host[2:]
+                    if not re.fullmatch(r"[a-z0-9.-]{4,253}", host):
+                        continue
+                    yield {"url": "https://" + host + "/", "title": host,
+                           "description": "", "query": "Certificate Transparency",
+                           "source": "crt.sh"}
+        except Exception as exc:
+            yield {"error": f"crt.sh ({pattern}): {type(exc).__name__}: {exc}"}
 
 def main() -> None:
-    api_key = os.getenv("BRAVE_SEARCH_API_KEY", "").strip()
     candidates: dict[str, dict] = {}
     errors = []
-    notice = None
-    if not api_key:
-        notice = "Configura BRAVE_SEARCH_API_KEY em GitHub Actions Secrets para ativar a pesquisa. Não são usadas notícias como alternativa."
-    else:
-        for query in QUERIES:
-            try:
-                for raw in brave_search(query, api_key):
-                    item = assess(raw)
-                    if item:
-                        previous = candidates.get(item["domain"])
-                        if previous is None or item["score"] > previous["score"]:
-                            candidates[item["domain"]] = item
-                time.sleep(0.15)
-            except Exception as exc:
-                errors.append(f"{query}: {type(exc).__name__}: {exc}")
+    found = 0
+    for raw in ct_candidates():
+        if "error" in raw:
+            errors.append(raw["error"])
+            continue
+        found += 1
+        item = assess(raw)
+        if item:
+            # CT logs prove only that a certificate was logged for the name:
+            # they do not prove that the website exists or is malicious.
+            item["source"] = "crt.sh · Certificate Transparency"
+            item["status"] = "Domínio potencial — validar existência, propriedade e conteúdo"
+            item["signals"].append("Nome encontrado em registos públicos de certificados TLS; website não verificado")
+            item["score"] = min(item["score"], 65)
+            item["priority"] = "Média" if item["score"] >= 50 else "Baixa"
+            previous = candidates.get(item["domain"])
+            if previous is None or item["score"] > previous["score"]:
+                candidates[item["domain"]] = item
+
+    notice = (
+        "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, "
+        "podem estar inativos ou pertencer a parceiros legítimos. "
+        "Nenhum website candidato foi visitado."
+    )
+    if errors:
+        notice += " Algumas consultas falharam; os resultados podem estar incompletos."
     result = {
         "version": 2,
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "provider": "Brave Search" if api_key else "Não configurado",
+        "provider": "crt.sh (Certificate Transparency) · gratuito",
         "notice": notice,
-        "checked_queries": len(QUERIES) if api_key else 0,
-        "results": sorted(
-            candidates.values(),
-            key=lambda x: (-x["score"], x["domain"]),
-        ),
+        "checked_queries": 4,
+        "results": sorted(candidates.values(), key=lambda x: (-x["score"], x["domain"]))[:300],
         "errors": errors,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Domains: {len(candidates)}; Errors: {len(errors)}; {notice or 'scan complete'}")
+    print(f"CT names processed: {found}; candidates: {len(candidates)}; errors: {len(errors)}")
+    # Preserve previous successful scan if ALL lookups fail, rather than clearing it.
+    if errors and found == 0:
+        raise SystemExit("No Certificate Transparency queries succeeded")
 
 if __name__ == "__main__":
     main()
