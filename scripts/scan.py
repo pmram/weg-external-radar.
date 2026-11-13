@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
+from check_sites import check_all
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "results.json"
@@ -144,7 +145,7 @@ def assess(item: dict) -> dict | None:
 
 def ct_candidates():
     """Public crt.sh certificate-transparency search; no API key or target probing."""
-    patterns = ["%.weg.%", "%weg-%", "wegmotor%", "wegenergy%"]
+    patterns = ["%.weg.%", "%weg-%", "wegmotor%", "wegenergy%", "weg-connect%", "%weg-connect%", "wegportal%", "wegservice%"]
     for pattern in patterns:
         endpoint = "https://crt.sh/?q=" + quote(pattern, safe="") + "&output=json"
         headers = {"User-Agent": "WEG-Brand-Monitor/3.0 (passive CT discovery)", "Accept": "application/json"}
@@ -168,50 +169,99 @@ def ct_candidates():
         except Exception as exc:
             yield {"error": f"crt.sh ({pattern}): {type(exc).__name__}: {exc}"}
 
+def seed_candidates():
+    """Operator-supplied names are discovery hints, never automatically marked active."""
+    path = ROOT / "data" / "known_domains.txt"
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        host = line.split("#", 1)[0].strip().lower()
+        if not re.fullmatch(r"[a-z0-9.-]{4,253}", host):
+            continue
+        yield {"url": "https://" + host + "/", "title": host,
+               "description": "", "query": "Domínio conhecido",
+               "source": "Semente de descoberta"}
+
 def main() -> None:
-    candidates: dict[str, dict] = {}
+    candidates = {}
     errors = []
-    found = 0
+    names_processed = 0
+
+    # In addition to certificate patterns, operator-supplied examples and
+    # previous candidates are rechecked on every run. No API key required.
+    sources = list(seed_candidates())
+    if OUTPUT.exists():
+        try:
+            old = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            for row in old.get("results", []) + old.get("unreachable", []):
+                domain = row.get("domain", "")
+                if re.fullmatch(r"[a-z0-9.-]{4,253}", domain):
+                    sources.append({"url": "https://" + domain + "/",
+                                    "title": domain, "description": "",
+                                    "source": "Histórico", "query": "Histórico"})
+        except (ValueError, OSError):
+            pass
+
+    for raw in sources:
+        item = assess(raw)
+        if item:
+            item["source"] = raw["source"]
+            candidates[item["domain"]] = item
+
     for raw in ct_candidates():
         if "error" in raw:
             errors.append(raw["error"])
             continue
-        found += 1
+        names_processed += 1
         item = assess(raw)
         if item:
-            # CT logs prove only that a certificate was logged for the name:
-            # they do not prove that the website exists or is malicious.
-            item["source"] = "crt.sh · Certificate Transparency"
-            item["status"] = "Domínio potencial — validar existência, propriedade e conteúdo"
-            item["signals"].append("Nome encontrado em registos públicos de certificados TLS; website não verificado")
-            item["score"] = min(item["score"], 65)
-            item["priority"] = "Média" if item["score"] >= 50 else "Baixa"
-            previous = candidates.get(item["domain"])
-            if previous is None or item["score"] > previous["score"]:
+            item["source"] = "crt.sh (Certificate Transparency)"
+            prior = candidates.get(item["domain"])
+            if not prior or item["score"] > prior["score"]:
                 candidates[item["domain"]] = item
 
+    # Keep scan bounded and prioritize known seeds + highest hostname confidence.
+    seeds = set(x["url"].split("/")[2] for x in sources if x.get("query") == "Domínio conhecido")
+    ordered = sorted(candidates, key=lambda h: (h not in seeds, -candidates[h]["score"], h))[:100]
+    candidates = {host: candidates[host] for host in ordered}
+    check_all(candidates)
+
+    active, inactive = [], []
+    for item in candidates.values():
+        item["status"] = "Requer validação humana"
+        item["signals"].append("Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo")
+        item["priority"] = "Média" if item["score"] >= 50 else "Baixa"
+        item["score"] = min(item["score"], 65)
+        if item["site_status"] == "Ativo":
+            item["url"] = item["checked_url"]
+            active.append(item)
+        else:
+            inactive.append(item)
+
+    active.sort(key=lambda x: (-x["score"], x["domain"]))
+    inactive.sort(key=lambda x: (x["site_status"], x["domain"]))
     notice = (
-        "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, "
-        "podem estar inativos ou pertencer a parceiros legítimos. "
-        "Nenhum website candidato foi visitado."
+        "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. "
+        "Isso não confirma que tenham aparência oficial nem que sejam fraudulentos. "
+        "Redirecionamentos e sites inacessíveis ficam separados."
     )
     if errors:
-        notice += " Algumas consultas falharam; os resultados podem estar incompletos."
+        notice += " Algumas pesquisas de certificados falharam."
     result = {
-        "version": 2,
+        "version": 3,
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "provider": "crt.sh (Certificate Transparency) · gratuito",
+        "provider": "crt.sh + DNS/HTTP (gratuito)",
         "notice": notice,
-        "checked_queries": 4,
-        "results": sorted(candidates.values(), key=lambda x: (-x["score"], x["domain"]))[:300],
+        "checked_queries": 8,
+        "results": active,
+        "unreachable": inactive,
         "errors": errors,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"CT names processed: {found}; candidates: {len(candidates)}; errors: {len(errors)}")
-    # Preserve previous successful scan if ALL lookups fail, rather than clearing it.
-    if errors and found == 0:
-        raise SystemExit("No Certificate Transparency queries succeeded")
+    print(f"Processed names: {names_processed}; checked: {len(candidates)}; active: {len(active)}; others: {len(inactive)}")
+    if errors and names_processed == 0 and not sources:
+        raise SystemExit("All discovery sources failed")
 
 if __name__ == "__main__":
     main()
