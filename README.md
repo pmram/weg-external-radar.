@@ -1,28 +1,39 @@
-# WEG Radar — Domain impersonation monitoring (gratuito)
+# WEG Radar — Monitorização mundial de possíveis domínios de impersonação
 
-Monitorização de domínios externos semelhantes à marca WEG, sem APIs pagas.
+Ferramenta OSINT gratuita para **descobrir domínios** que possam aparentar ser da WEG. A identificação não equivale a fraude confirmada.
 
-## Novidades
-- Descoberta via Certificate Transparency (crt.sh), incluindo pesquisas para variantes como `weg-connect`.
-- Ficheiro `data/known_domains.txt` para acrescentar nomes a verificar em cada execução, por exemplo `weg-connect.kz`.
-- Verificação de resolução DNS para IPs públicos e resposta HTTP/HTTPS, sem descarregar o corpo das páginas.
-- Dashboard apresenta por defeito apenas domínios com resposta HTTP 2xx ("Ativos").
-- Um filtro permite consultar "Redireciona", "Acesso restrito" e "Inacessível".
-- Histórico dos candidatos para voltar a verificar domínios na recolha seguinte.
+## Descoberta mundial, sem APIs pagas
 
-## Deploy
-GitHub Pages: https://pmram.github.io/weg-external-radar./
+- Certificate Transparency via **crt.sh**: combina pesquisas amplas por `weg-%`, `wegsolut%`, `weg-solut%`, `weg-connect%` e outras variantes em rotação.
+- **urlscan.io**: consulta apenas análises **públicas já existentes**, com quota gratuita/sem autenticação, se disponível. Não cria análises públicas nem envia URLs.
+- **Sementes confirmadas pelo operador**: `data/known_domains.txt` com `weg-solutions.kz` e `weg-products.ru`. São objetos de investigação, não domínios declarados falsos.
+- **Histórico**: retém domínios descobertos nos ciclos anteriores.
+- Todas as extensões e países são elegíveis; não há filtro geográfico.
+- Validação técnica DNS + HTTP/HTTPS (IP público, sem seguir redirecionamentos, com limite de simultaneidade).
+- Até 140 verificações HTTP por execução, com lote em rotação e prioridades para as sementes. Os restantes mantêm-se em "Não verificado".
+- Sem chave Brave, sem pagamentos de API. Sujeito a disponibilidade, quotas, limites de GitHub e fontes públicas.
 
-GitHub Actions executa a pesquisa diariamente às 07:13 UTC; também podes usar Run workflow.
+## Porque weg-solutions.kz não aparecia?
 
-## Segurança e limites
-- "Ativo" significa **resposta HTTP 2xx no momento da verificação**, não que seja um site funcional, legítimo, fraudulento ou que se faça passar pela WEG.
-- Redirecionamentos não são seguidos; aparecem numa categoria distinta.
-- O scanner restringe as ligações a IPs públicos, aplica timeout e limita paralelismo e número de candidatos.
-- Sites geograficamente restritos, protegidos por bot protection ou que exijam autenticação podem não aparecer entre os ativos.
-- Os resultados de Certificate Transparency são incompletos e o crt.sh pode falhar temporariamente.
-- `weg.net` e subdomínios são excluídos; outros domínios oficiais exigem uma lista verificada em `TRUSTED_DOMAINS`.
-- Para identificar verdadeiras páginas de impersonação ainda será necessário inspeção segura do conteúdo e validação humana.
+O CT anterior usava poucos padrões, entre eles `weg-connect%` (domínio indicado inicialmente), mas não procurava `weg-solut%` ou `weg-%`. Limitava ainda a validação aos primeiros 65 candidatos. A ausência de um nome na pesquisa não demonstra ausência de fraude. A página `weg-products.ru` remete publicamente para `weg-solutions.kz`; a autorização formal dessa relação comercial continua por verificar.
 
-## Adicionar candidatos
-Acrescenta uma linha em `data/known_domains.txt` por domínio. Cada alteração inicia nova recolha. São **indícios a verificar**, nunca acusações de fraude.
+## Configuração
+
+- GitHub Pages: https://pmram.github.io/weg-external-radar./
+- Github Actions: **Scan public web**, agendado às 07:13 UTC ou manual.
+- `TRUSTED_DOMAINS`: variável opcional, domínios confirmados como oficiais, separados por vírgulas.
+- A publicação do GitHub Pages ocorre quando um scan termina com sucesso, lendo a versão mais recente de main.
+
+## Interpretação
+
+- **Ativo:** resposta HTTP 2xx; não demonstra que a página corresponde à marca.
+- **Redireciona:** HTTP 3xx não seguido, destino não verificado.
+- **Acesso restrito:** HTTP 401/403.
+- **Inacessível:** ligação ou DNS falhou a partir do runner.
+- **Não verificado:** fora do lote do dia.
+- Os sinais e score são triagem de risco de nome, não prova de fraude.
+- A ausência de um candidato não constitui prova de segurança, já que fontes públicas não são exaustivas.
+
+## Próximo nível, se necessário
+
+Para detetar efetiva falsificação visual, seria necessário comparar conteúdo e aparência em ambiente de análise isolado, confirmar titularidade e diferenciar distribuidores autorizados. O projeto atual **não** executa conteúdo das páginas nem recolhe credenciais.
