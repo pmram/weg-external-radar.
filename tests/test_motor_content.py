@@ -11,6 +11,10 @@ class MotorContentTests(unittest.TestCase):
         s,t,_=classify_html(b"<html><body>WEG electric motors for industrial applications</body></html>")
         self.assertEqual(s,"Referências a motores")
         self.assertIn("electric motors",t)
+    def test_weg_motor_brand_term(self):
+        status, terms, _ = classify_html(b"<body>WEG Motors and industrial solutions</body>")
+        self.assertEqual(status, "Referências a motores")
+        self.assertIn("WEG motors", terms)
     def test_portuguese(self):
         s,t,_=classify_html("<html><body>Motores elétricos industriais</body></html>".encode())
         self.assertEqual(s,"Referências a motores")
@@ -32,7 +36,7 @@ class MotorContentTests(unittest.TestCase):
     def test_large_response_not_accepted(self):
         response=MagicMock()
         response.status=200
-        response.getheader.side_effect=lambda n,default="": "text/html" if n=="Content-Type" else "500000" if n=="Content-Length" else default
+        response.getheader.side_effect=lambda n,default="": "text/html" if n=="Content-Type" else "900000" if n=="Content-Length" else default
         conn=MagicMock()
         conn.getresponse.return_value=response
         with patch("motor_content.public_addresses",return_value=["8.8.8.8"]),patch("motor_content.PinnedHTTPS",return_value=conn):
