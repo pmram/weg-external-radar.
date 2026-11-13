@@ -1,614 +1,36 @@
 {
   "version": 2,
-  "updated_at": "2026-11-13T20:20:01.355990+00:00",
+  "updated_at": "2026-11-13T20:21:22.535470+00:00",
   "provider": "crt.sh (Certificate Transparency) · gratuito",
-  "notice": "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, podem estar inativos ou pertencer a parceiros legítimos. Nenhum website candidato foi visitado. Algumas consultas falharam; os resultados podem estar incompletos.",
+  "notice": "Pesquisa gratuita de certificados TLS: os candidatos não são sites confirmados, podem estar inativos ou pertencer a parceiros legítimos. Nenhum website candidato foi visitado.",
   "checked_queries": 4,
   "results": [
     {
-      "domain": "atqdcerc7p-9uorjjjeqbx34wfbn-weg",
-      "url": "https://atqdcerc7p-9uorjjjeqbx34wfbn-weg/",
-      "title": "atqdcerc7p-9uorjjjeqbx34wfbn-weg",
+      "domain": "wegenergy.com",
+      "url": "https://wegenergy.com/",
+      "title": "wegenergy.com",
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
       "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
     },
     {
-      "domain": "auf-dem-weg-zu-mir-peter-maffay-text--848204630.helpclean.de",
-      "url": "https://auf-dem-weg-zu-mir-peter-maffay-text--848204630.helpclean.de/",
-      "title": "auf-dem-weg-zu-mir-peter-maffay-text--848204630.helpclean.de",
+      "domain": "wegenergybodrum.com",
+      "url": "https://wegenergybodrum.com/",
+      "title": "wegenergybodrum.com",
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
       "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "auf-dem-weg-zur--1.esba-racing.de",
-      "url": "https://auf-dem-weg-zur--1.esba-racing.de/",
-      "title": "auf-dem-weg-zur--1.esba-racing.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "bauch-weg-nach-schwangerschaft--151373056.borsan.de",
-      "url": "https://bauch-weg-nach-schwangerschaft--151373056.borsan.de/",
-      "title": "bauch-weg-nach-schwangerschaft--151373056.borsan.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "bauch-weg-training-frauen-ab-50--344001599.helpclean.de",
-      "url": "https://bauch-weg-training-frauen-ab-50--344001599.helpclean.de/",
-      "title": "bauch-weg-training-frauen-ab-50--344001599.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de",
-      "url": "https://bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de/",
-      "title": "bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "da-fliegt-mir-doch-das-blech-weg--547435616.futuretrack.de",
-      "url": "https://da-fliegt-mir-doch-das-blech-weg--547435616.futuretrack.de/",
-      "title": "da-fliegt-mir-doch-das-blech-weg--547435616.futuretrack.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "der-dritte-weg-ddr--9915068.jasont.de",
-      "url": "https://der-dritte-weg-ddr--9915068.jasont.de/",
-      "title": "der-dritte-weg-ddr--9915068.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "der-weg-herbert-gronemeyer-text--489141318.jasont.de",
-      "url": "https://der-weg-herbert-gronemeyer-text--489141318.jasont.de/",
-      "title": "der-weg-herbert-gronemeyer-text--489141318.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "der-weg-zum-fussballprofi--106982173.helpclean.de",
-      "url": "https://der-weg-zum-fussballprofi--106982173.helpclean.de/",
-      "title": "der-weg-zum-fussballprofi--106982173.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "die-leute-rennen-uns-alle-weg--1815177.women-in-technology.de",
-      "url": "https://die-leute-rennen-uns-alle-weg--1815177.women-in-technology.de/",
-      "title": "die-leute-rennen-uns-alle-weg--1815177.women-in-technology.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "eind-weg",
-      "url": "https://eind-weg/",
-      "title": "eind-weg",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "elbe-rad-weg--573583574.matthewmitchell.de",
-      "url": "https://elbe-rad-weg--573583574.matthewmitchell.de/",
-      "title": "elbe-rad-weg--573583574.matthewmitchell.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "ernst-kuzorra-weg-1",
-      "url": "https://ernst-kuzorra-weg-1/",
-      "title": "ernst-kuzorra-weg-1",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "fett-weg-spritze-hannover--506482984.westernholz.de",
-      "url": "https://fett-weg-spritze-hannover--506482984.westernholz.de/",
-      "title": "fett-weg-spritze-hannover--506482984.westernholz.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "fett-weg-spritze-schwellung--19978724.cheminsight.de",
-      "url": "https://fett-weg-spritze-schwellung--19978724.cheminsight.de/",
-      "title": "fett-weg-spritze-schwellung--19978724.cheminsight.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "finger-weg-3-staffel--65811971.futuretrack.de",
-      "url": "https://finger-weg-3-staffel--65811971.futuretrack.de/",
-      "title": "finger-weg-3-staffel--65811971.futuretrack.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "finger-weg-staffel-3-patrick--484355003.helpclean.de",
-      "url": "https://finger-weg-staffel-3-patrick--484355003.helpclean.de/",
-      "title": "finger-weg-staffel-3-patrick--484355003.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "gewitter-zaehlen-wie-weit-weg--40110997.scienceandfaith.de",
-      "url": "https://gewitter-zaehlen-wie-weit-weg--40110997.scienceandfaith.de/",
-      "title": "gewitter-zaehlen-wie-weit-weg--40110997.scienceandfaith.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "hermann-schauten-weg.30",
-      "url": "https://hermann-schauten-weg.30/",
-      "title": "hermann-schauten-weg.30",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "himmelhunde-auf-dem-weg-zur-holle--683338598.helpclean.de",
-      "url": "https://himmelhunde-auf-dem-weg-zur-holle--683338598.helpclean.de/",
-      "title": "himmelhunde-auf-dem-weg-zur-holle--683338598.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "katze-leckt-sich-fell-weg-stress--139169936.helpclean.de",
-      "url": "https://katze-leckt-sich-fell-weg-stress--139169936.helpclean.de/",
-      "title": "katze-leckt-sich-fell-weg-stress--139169936.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "nix-wie-weg",
-      "url": "https://nix-wie-weg/",
-      "title": "nix-wie-weg",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "qvcgupnc5qqeaa-weg--4cmbzsfgpdjp",
-      "url": "https://qvcgupnc5qqeaa-weg--4cmbzsfgpdjp/",
-      "title": "qvcgupnc5qqeaa-weg--4cmbzsfgpdjp",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "rhein-burgen-weg-etappen--578591153.futuretrack.de",
-      "url": "https://rhein-burgen-weg-etappen--578591153.futuretrack.de/",
-      "title": "rhein-burgen-weg-etappen--578591153.futuretrack.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "smartphone-klinke-ist-weg--752523494.jasont.de",
-      "url": "https://smartphone-klinke-ist-weg--752523494.jasont.de/",
-      "title": "smartphone-klinke-ist-weg--752523494.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "standort-symbol-geht-nicht-weg--184814199.helpclean.de",
-      "url": "https://standort-symbol-geht-nicht-weg--184814199.helpclean.de/",
-      "title": "standort-symbol-geht-nicht-weg--184814199.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "weg--en-waterbouwkundige.pv-simonloos.nl",
-      "url": "https://weg--en-waterbouwkundige.pv-simonloos.nl/",
-      "title": "weg--en-waterbouwkundige.pv-simonloos.nl",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "weg-gesetze-im-internet--38100747.helpclean.de",
-      "url": "https://weg-gesetze-im-internet--38100747.helpclean.de/",
-      "title": "weg-gesetze-im-internet--38100747.helpclean.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "weg-in-die-wildnis--609697189.matthewmitchell.de",
-      "url": "https://weg-in-die-wildnis--609697189.matthewmitchell.de/",
-      "title": "weg-in-die-wildnis--609697189.matthewmitchell.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "weg-track--dev.dings.best",
-      "url": "https://weg-track--dev.dings.best/",
-      "title": "weg-track--dev.dings.best",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.auf-dem-weg-zur--1.esba-racing.de",
-      "url": "https://www.auf-dem-weg-zur--1.esba-racing.de/",
-      "title": "www.auf-dem-weg-zur--1.esba-racing.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.bauch-weg-nach-schwangerschaft--151373056.borsan.de",
-      "url": "https://www.bauch-weg-nach-schwangerschaft--151373056.borsan.de/",
-      "title": "www.bauch-weg-nach-schwangerschaft--151373056.borsan.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de",
-      "url": "https://www.bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de/",
-      "title": "www.bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.der-weg-herbert-gronemeyer-text--489141318.jasont.de",
-      "url": "https://www.der-weg-herbert-gronemeyer-text--489141318.jasont.de/",
-      "title": "www.der-weg-herbert-gronemeyer-text--489141318.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.fett-weg-spritze-hannover--506482984.westernholz.de",
-      "url": "https://www.fett-weg-spritze-hannover--506482984.westernholz.de/",
-      "title": "www.fett-weg-spritze-hannover--506482984.westernholz.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.smartphone-klinke-ist-weg--752523494.jasont.de",
-      "url": "https://www.smartphone-klinke-ist-weg--752523494.jasont.de/",
-      "title": "www.smartphone-klinke-ist-weg--752523494.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
-        "Nome encontrado em registos públicos de certificados TLS; website não verificado"
-      ],
-      "status": "Domínio potencial — validar existência, propriedade e conteúdo"
-    },
-    {
-      "domain": "www.www.bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de",
-      "url": "https://www.www.bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de/",
-      "title": "www.www.bauch-weg-uebungen-fuer-zuhause--212242299.jasont.de",
-      "description": "",
-      "source": "crt.sh · Certificate Transparency",
-      "query": "Certificate Transparency",
-      "score": 55,
-      "priority": "Média",
-      "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
-        "A marca WEG aparece no título ou resumo",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -620,10 +42,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -635,10 +57,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -650,10 +72,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -665,10 +87,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -680,10 +102,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -695,10 +117,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -710,10 +132,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -725,10 +147,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -740,10 +162,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -755,10 +177,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -770,10 +192,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -785,10 +207,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -800,10 +222,10 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
@@ -815,16 +237,14 @@
       "description": "",
       "source": "crt.sh · Certificate Transparency",
       "query": "Certificate Transparency",
-      "score": 50,
+      "score": 55,
       "priority": "Média",
       "signals": [
-        "O endereço combina WEG com termos de marca/serviço",
+        "O endereço começa por WEG e um termo comercial",
         "Nome encontrado em registos públicos de certificados TLS; website não verificado"
       ],
       "status": "Domínio potencial — validar existência, propriedade e conteúdo"
     }
   ],
-  "errors": [
-    "crt.sh (wegenergy%): HTTPError: HTTP Error 502: Bad Gateway"
-  ]
+  "errors": []
 }
