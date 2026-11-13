@@ -16,6 +16,7 @@ from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 from check_sites import check_all
+from motor_content import check_motor_content
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "results.json"
@@ -282,25 +283,38 @@ def main() -> None:
     selected = fixed + rotated[:max_checks - len(fixed)]
     to_check = {h: candidates[h] for h in selected}
     check_all(to_check)
+    # Second layer: inspect bounded public HTML only on responding sites.
+    check_motor_content(to_check)
     for host, item in candidates.items():
         if host not in to_check:
             item.update(site_status="Não verificado", http_status=None, checked_url=None,
                         check_detail="Não incluído no lote diário; aguarda próxima verificação")
 
     active, inactive = [], []
+    matched, weak, unrelated = [], [], []
     for item in candidates.values():
         item["status"] = "Requer validação humana"
         if item["site_status"] != "Não verificado":
             item["signals"].append("Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo")
         item["priority"] = "Média" if item["score"] >= 50 else "Baixa"
         item["score"] = min(item["score"], 65)
+        item.setdefault("motor_status", "Não verificado")
+        item.setdefault("motor_terms", [])
+        item.setdefault("motor_detail", "Site inacessível ou não inspecionado")
         if item["site_status"] == "Ativo":
             item["url"] = item["checked_url"]
+            if item["motor_status"] == "Referências a motores":
+                item["signals"].append("Conteúdo público com referências explícitas a motores elétricos")
+                matched.append(item)
+            elif item["motor_status"] == "Indício fraco":
+                weak.append(item)
+            else:
+                unrelated.append(item)
             active.append(item)
         else:
             inactive.append(item)
 
-    active.sort(key=lambda x: (-x["score"], x["domain"]))
+    active.sort(key=lambda x: (x["motor_status"] != "Referências a motores", -x["score"], x["domain"]))
     inactive.sort(key=lambda x: (x["site_status"], x["domain"]))
     notice = (
         "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. "
@@ -310,13 +324,16 @@ def main() -> None:
     if errors:
         notice += " Algumas pesquisas de certificados falharam."
     result = {
-        "version": 3,
+        "version": 4,
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "provider": "crt.sh + urlscan.io público + DNS/HTTP (gratuito)",
-        "notice": notice,
+        "notice": notice + " Nova camada: análise limitada do HTML inicial para referências a motores elétricos. A ausência de termos não prova ausência de conteúdo relevante.",
         "checked_queries": 12,
         "total_candidates": len(candidates),
         "checked_count": len(to_check),
+        "motor_confirmed_count": len(matched),
+        "motor_weak_count": len(weak),
+        "motor_other_count": len(unrelated),
         "results": active,
         "unreachable": inactive,
         "errors": errors,
