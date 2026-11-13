@@ -78,26 +78,30 @@ def hostname(url: str) -> str:
         return ""
 
 def domain_evidence(host: str) -> tuple[int, list[str]]:
+    """Prefer WEG as an initial brand token; avoid German 'Weg' meaning 'way'."""
     labels = host.split(".")
-    # Only hostname/domain identity may establish a candidate.
     score = 0
     evidence = []
     for label in labels:
         if label == "weg":
-            score = max(score, 55)
-            evidence = ["A marca WEG aparece como componente autónoma do domínio"]
-        elif re.search(r"(^weg[-0-9]|[-0-9]weg($|[-0-9])|weg(motor|energy|electric|group|brasil|global|portal|support|service|oficial|official|shop|store)|^(motor|energy|electric|portal|support|service|official|oficial|shop|store)weg)", label):
-            if score < 50:
-                score = 50
-                evidence = ["O endereço combina WEG com termos de marca/serviço"]
-        elif label.startswith("weg") or label.endswith("weg"):
-            if score < 38:
-                score = 38
-                evidence = ["O endereço incorpora a sequência WEG"]
-        elif label in ("wge", "weq", "vveg", "wegg", "w-eg"):
-            if score < 45:
-                score = 45
-                evidence = ["O endereço é semelhante à grafia WEG"]
+            candidate_score, reason = 55, "A marca WEG aparece como componente autónoma do domínio"
+        elif re.match(r"^weg[-_](motor|motors|motores|electric|energy|portal|support|service|official|oficial|shop|store|group|brasil)", label):
+            candidate_score, reason = 55, "O endereço combina WEG com um termo relacionado com a marca"
+        elif re.match(r"^weg(motor|motors|motores|electric|energy|portal|support|service|official|oficial|shop|store|group|brasil)", label):
+            candidate_score, reason = 55, "O endereço começa por WEG e um termo comercial"
+        elif re.fullmatch(r"weg[-a-z0-9]{0,15}", label):
+            # Allow short weg-something, but reject common unrelated German phrases.
+            forbidden = ("weg-zur", "weg-zu", "weg-von", "weg-fuer",
+                         "weg-gesetze", "weg-in", "weg-track")
+            if label.startswith(forbidden):
+                continue
+            candidate_score, reason = 38, "O nome do domínio começa por WEG"
+        elif label in ("wge", "weq", "vveg", "wegg"):
+            candidate_score, reason = 40, "O nome apresenta grafia semelhante a WEG"
+        else:
+            continue
+        if candidate_score > score:
+            score, evidence = candidate_score, [reason]
     return score, evidence
 
 def assess(item: dict) -> dict | None:
