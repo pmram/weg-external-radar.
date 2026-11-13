@@ -1,17 +1,40 @@
 {
   "version": 3,
-  "updated_at": "2026-11-13T20:32:48.716918+00:00",
-  "provider": "crt.sh + DNS/HTTP (gratuito)",
-  "notice": "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. Isso não confirma que tenham aparência oficial nem que sejam fraudulentos. Redirecionamentos e sites inacessíveis ficam separados.",
-  "checked_queries": 5,
+  "updated_at": "2026-11-13T20:43:07.587239+00:00",
+  "provider": "crt.sh + urlscan.io público + DNS/HTTP (gratuito)",
+  "notice": "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. Isso não confirma que tenham aparência oficial nem que sejam fraudulentos. Redirecionamentos e sites inacessíveis ficam separados. Algumas pesquisas de certificados falharam.",
+  "checked_queries": 12,
+  "total_candidates": 109,
+  "checked_count": 109,
   "results": [
+    {
+      "domain": "weggaintrasolution.com",
+      "url": "https://weggaintrasolution.com/",
+      "title": "Weg Gaintra | Smart Trading | Verified Web Portal",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 58,
+      "priority": "Média",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "O resumo menciona autenticação, conta ou portal",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weggaintrasolution.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
     {
       "domain": "wegenergy.com",
       "url": "https://wegenergy.com/",
       "title": "wegenergy.com",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -143,8 +166,8 @@
       "url": "https://wegportaluat.powerappsportals.com/",
       "title": "wegportaluat.powerappsportals.com",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -156,13 +179,1164 @@
       "http_status": 206,
       "checked_url": "https://wegportaluat.powerappsportals.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-begleiter.ch",
+      "url": "https://weg-begleiter.ch/",
+      "title": "Weg-Begleiter",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg-begleiter.ch/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-der-demenz.de",
+      "url": "https://weg-der-demenz.de/",
+      "title": "Startseite - Der Weg der Demenz",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://weg-der-demenz.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-der-liebe.ch",
+      "url": "https://weg-der-liebe.ch/",
+      "title": "Weg der Liebe - Wilderswil",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg-der-liebe.ch/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-licht.clubdesk.ch",
+      "url": "https://weg-licht.clubdesk.ch/",
+      "title": "Willkommen - Weg-Licht",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg-licht.clubdesk.ch/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-products.ru",
+      "url": "https://weg-products.ru/",
+      "title": "weg-products.ru",
+      "description": "",
+      "source": "Semente de descoberta",
+      "query": "Domínio conhecido",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg-products.ru/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-sechtem.de",
+      "url": "https://weg-sechtem.de/",
+      "title": "WEG Sechtem",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg-sechtem.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg06-de1.storage.googleapis.com",
+      "url": "https://weg06-de1.storage.googleapis.com/",
+      "title": "weg06-de1.storage.googleapis.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg06-de1.storage.googleapis.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegenwild.be",
+      "url": "https://wegenwild.be/",
+      "title": "Weg & Wild — Expedities te voet naar wilde natuur en wildlife",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegenwild.be/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegscore.de",
+      "url": "https://wegscore.de/",
+      "title": "WEGscore – Verwaltervergütung berechnen & WEG-Mandate prüfen",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegscore.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-cfq.pages.dev",
+      "url": "https://weg-cfq.pages.dev/",
+      "title": "Home | World's Edge Group",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weg-cfq.pages.dev/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg-und-weg.de",
+      "url": "https://weg-und-weg.de/",
+      "title": "Coming Soon",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://weg-und-weg.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weg11-09eg.290ma9qt9.cc",
+      "url": "https://weg11-09eg.290ma9qt9.cc/",
+      "title": "澳门新葡京",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://weg11-09eg.290ma9qt9.cc/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegaimport.pl",
+      "url": "https://wegaimport.pl/",
+      "title": "Wega Import herbaty i kawy od 20 lat",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegaimport.pl/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegamexiazai.org.cn",
+      "url": "http://wegamexiazai.org.cn/",
+      "title": "403 Forbidden",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "http://wegamexiazai.org.cn/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegameyouxipingtai.asia",
+      "url": "https://wegameyouxipingtai.asia/",
+      "title": "WeGame游戏平台 - 一站式PC游戏服务平台",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegameyouxipingtai.asia/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegarant.com",
+      "url": "https://wegarant.com/",
+      "title": "Wegarant | Answers for Your Funding Question",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegarant.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegatherwhatechoes.com",
+      "url": "https://wegatherwhatechoes.com/",
+      "title": "Home",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegatherwhatechoes.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegc.chineseplus.net",
+      "url": "http://wegc.chineseplus.net/",
+      "title": "新西兰惠灵顿女子东方中学网络中文课堂",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "http://wegc.chineseplus.net/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegconnect.com",
+      "url": "https://wegconnect.com/",
+      "title": "wegconnect.com",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegconnect.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegconnect.net",
+      "url": "https://wegconnect.net/",
+      "title": "wegconnect.net",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegconnect.net/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wege-der-ahnen.de",
+      "url": "https://wege-der-ahnen.de/",
+      "title": "Start — Wege der Ahnen",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wege-der-ahnen.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegebund.de",
+      "url": "https://wegebund.de/",
+      "title": "wegebund",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegebund.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegedernatur.at",
+      "url": "https://wegedernatur.at/",
+      "title": "wegedernatur.at – Just another WordPress site",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegedernatur.at/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegegehen.ch",
+      "url": "http://wegegehen.ch/",
+      "title": "wegegehen.ch | Hallo, diese Domain wurde gerade bei Hostpoint gekauft.",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "http://wegegehen.ch/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegenenverkeer.data.vlaanderen.be",
+      "url": "https://wegenenverkeer.data.vlaanderen.be/",
+      "title": "OTL implementatiemodel Data.Vlaanderen.be",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegenenverkeer.data.vlaanderen.be/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weger.s2-data.at",
+      "url": "https://weger.s2-data.at/",
+      "title": "S2data | Weger Bozen",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weger.s2-data.at/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegetiot.com",
+      "url": "https://wegetiot.com/",
+      "title": "Wegetiot | Wegetiot",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegetiot.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegetreal.ca",
+      "url": "https://wegetreal.ca/",
+      "title": "The Get REAL Movement Store!",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegetreal.ca/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegfygfe.com",
+      "url": "https://wegfygfe.com/",
+      "title": "wegfygfe.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegfygfe.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weggaintra.pro",
+      "url": "https://weggaintra.pro/",
+      "title": "weggaintra.pro",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://weggaintra.pro/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegirlsglobal.com",
+      "url": "https://wegirlsglobal.com/",
+      "title": "Chayah Conference ’26 | We Girls Global",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegirlsglobal.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "weglokocs.com",
+      "url": "https://weglokocs.com/",
+      "title": "weglokocs.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://weglokocs.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegner-tools.com",
+      "url": "https://wegner-tools.com/",
+      "title": "wegner-tools.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegner-tools.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wego.eco",
+      "url": "https://wego.eco/",
+      "title": "We Go Eco - Sirkulærøkonomi",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wego.eco/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wego.here.com",
+      "url": "https://wego.here.com/",
+      "title": "HERE WeGo",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wego.here.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wego6m.storage.googleapis.com",
+      "url": "https://wego6m.storage.googleapis.com/",
+      "title": "Überprüfung",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wego6m.storage.googleapis.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegocitypolice.com",
+      "url": "https://wegocitypolice.com/",
+      "title": "WEGO City PD",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegocitypolice.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegohomeapparel.com",
+      "url": "https://wegohomeapparel.com/",
+      "title": "We Go Home | Supplements & Apparel for Military & First Responders",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegohomeapparel.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegojieruimed.com",
+      "url": "https://wegojieruimed.com/",
+      "title": "WEIHAI JIERUI MEDICAL PRODUCTS",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegojieruimed.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegolfnetwork.com",
+      "url": "https://wegolfnetwork.com/",
+      "title": "Beginner Golf Tours - WeGolf Adult Beginners Network",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegolfnetwork.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegoodfdd.site",
+      "url": "http://wegoodfdd.site/",
+      "title": "404 Not Found",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "http://wegoodfdd.site/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegosewkay.weebly.com",
+      "url": "https://wegosewkay.weebly.com/",
+      "title": "哪里有卖叶子燃料WEED的 - Home",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegosewkay.weebly.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegotfilters.com",
+      "url": "https://wegotfilters.com/",
+      "title": "We Got Filters by AirCoast Industrial Solutions",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegotfilters.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegotthiscovered.com",
+      "url": "https://wegotthiscovered.com/",
+      "title": "Movie News, TV News, Celebrity News, Marvel News, Netflix News, Anime News | We Got This Covered",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegotthiscovered.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegotyoutaxservice.com",
+      "url": "https://wegotyoutaxservice.com/",
+      "title": "Professional Tax Services in Grapevine, TX | We Got You Tax Service",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegotyoutaxservice.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegovy-pill-prices.co.uk",
+      "url": "https://wegovy-pill-prices.co.uk/",
+      "title": "Wegovy Pill Prices UK | Compare All 4 Tablet Strengths",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegovy-pill-prices.co.uk/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegoxplore.com",
+      "url": "https://wegoxplore.com/",
+      "title": "wegoxplore.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegoxplore.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegrant.com",
+      "url": "https://wegrant.com/",
+      "title": "WeGrant – La plataforma inteligente para ayudas públicas",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegrant.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegsolution.com",
+      "url": "https://wegsolution.com/",
+      "title": "wegsolution.com",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegsolution.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegterbrands.com",
+      "url": "https://wegterbrands.com/",
+      "title": "Wegter Brands - Inloggen",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegterbrands.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegukrv.com.cn",
+      "url": "https://wegukrv.com.cn/",
+      "title": "“00后”接棒非遗传承：传统技艺碰撞青春表达",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegukrv.com.cn/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegweiser.fachgerecht-bauen.de",
+      "url": "https://wegweiser.fachgerecht-bauen.de/",
+      "title": "SKR Leistungswegweiser",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 206,
+      "checked_url": "https://wegweiser.fachgerecht-bauen.de/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
+    },
+    {
+      "domain": "wegym.com",
+      "url": "https://wegym.com/",
+      "title": "WeGym - Home Fitness Equipment – WeGym Fitness",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Ativo",
+      "http_status": 200,
+      "checked_url": "https://wegym.com/",
+      "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados"
     }
   ],
   "unreachable": [
     {
+      "domain": "wegame.com.cn.igame.plus",
+      "url": "https://wegame.com.cn.igame.plus/",
+      "title": "Login - RustDesk API Admin",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 53,
+      "priority": "Média",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "O resumo menciona autenticação, conta ou portal",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Acesso restrito",
+      "http_status": 403,
+      "checked_url": "http://wegame.com.cn.igame.plus/",
+      "check_detail": "Servidor responde, mas não permite acesso público"
+    },
+    {
+      "domain": "wegde02.syd1.cdn.digitaloceanspaces.com",
+      "url": "https://wegde02.syd1.cdn.digitaloceanspaces.com/",
+      "title": "wegde02.syd1.cdn.digitaloceanspaces.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Acesso restrito",
+      "http_status": 403,
+      "checked_url": "https://wegde02.syd1.cdn.digitaloceanspaces.com/",
+      "check_detail": "Servidor responde, mas não permite acesso público"
+    },
+    {
+      "domain": "wegde19.tor1.cdn.digitaloceanspaces.com",
+      "url": "https://wegde19.tor1.cdn.digitaloceanspaces.com/",
+      "title": "wegde19.tor1.cdn.digitaloceanspaces.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Acesso restrito",
+      "http_status": 403,
+      "checked_url": "https://wegde19.tor1.cdn.digitaloceanspaces.com/",
+      "check_detail": "Servidor responde, mas não permite acesso público"
+    },
+    {
+      "domain": "wego08.ams3.cdn.digitaloceanspaces.com",
+      "url": "https://wego08.ams3.cdn.digitaloceanspaces.com/",
+      "title": "wego08.ams3.cdn.digitaloceanspaces.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Acesso restrito",
+      "http_status": 403,
+      "checked_url": "https://wego08.ams3.cdn.digitaloceanspaces.com/",
+      "check_detail": "Servidor responde, mas não permite acesso público"
+    },
+    {
+      "domain": "wego24.nyc3.cdn.digitaloceanspaces.com",
+      "url": "https://wego24.nyc3.cdn.digitaloceanspaces.com/",
+      "title": "wego24.nyc3.cdn.digitaloceanspaces.com",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Acesso restrito",
+      "http_status": 403,
+      "checked_url": "https://wego24.nyc3.cdn.digitaloceanspaces.com/",
+      "check_detail": "Servidor responde, mas não permite acesso público"
+    },
+    {
+      "domain": "wegsolutions.com",
+      "url": "https://wegsolutions.com/",
+      "title": "wegsolutions.com",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Acesso restrito",
+      "http_status": 403,
+      "checked_url": "http://wegsolutions.com/",
+      "check_detail": "Servidor responde, mas não permite acesso público"
+    },
+    {
       "domain": "weg-connect.kz",
       "url": "https://weg-connect.kz/",
       "title": "weg-connect.kz",
+      "description": "",
+      "source": "Histórico",
+      "query": "Histórico",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "weg-solutions.kz",
+      "url": "https://weg-solutions.kz/",
+      "title": "weg-solutions.kz",
       "description": "",
       "source": "Semente de descoberta",
       "query": "Domínio conhecido",
@@ -177,7 +1351,64 @@
       "site_status": "Inacessível",
       "http_status": null,
       "checked_url": null,
+      "check_detail": "https: TimeoutError; http: TimeoutError"
+    },
+    {
+      "domain": "wegasoft.de",
+      "url": "https://wegasoft.de/",
+      "title": "Home - WEGASOFT Software-Entwicklung GmbH",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "https HTTP 503; https: OSError; http HTTP 503; http: OSError"
+    },
+    {
+      "domain": "wegconnect-net.wegwill.net",
+      "url": "https://wegconnect-net.wegwill.net/",
+      "title": "wegconnect-net.wegwill.net",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
       "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegkxfcivgx.ydns.eu",
+      "url": "https://wegkxfcivgx.ydns.eu/",
+      "title": "wegkxfcivgx.ydns.eu",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "https: TimeoutError; https: OSError; http: TimeoutError; http: OSError"
     },
     {
       "domain": "wegmotores.com",
@@ -256,12 +1487,31 @@
       "check_detail": "DNS sem endereços públicos resolúveis"
     },
     {
+      "domain": "wegobank.co.uk",
+      "url": "https://wegobank.co.uk/",
+      "title": "wegobank.co.uk | 520: Web server is returning an unknown error",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "https HTTP 520; https HTTP 520; http HTTP 520; http HTTP 520"
+    },
+    {
       "domain": "wegportal.selta-immo.de",
       "url": "https://wegportal.selta-immo.de/",
       "title": "wegportal.selta-immo.de",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -279,8 +1529,8 @@
       "url": "https://wegportalen.nl/",
       "title": "wegportalen.nl",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -294,12 +1544,244 @@
       "check_detail": "https: ConnectionResetError; http: TimeoutError"
     },
     {
+      "domain": "wegsolutions.app",
+      "url": "https://wegsolutions.app/",
+      "title": "wegsolutions.app",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "https: TimeoutError; http: TimeoutError"
+    },
+    {
+      "domain": "wegsolutions.net",
+      "url": "https://wegsolutions.net/",
+      "title": "wegsolutions.net",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegsolutions.org",
+      "url": "https://wegsolutions.org/",
+      "title": "wegsolutions.org",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "wegsolutions.xyz",
+      "url": "https://wegsolutions.xyz/",
+      "title": "wegsolutions.xyz",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Inacessível",
+      "http_status": null,
+      "checked_url": null,
+      "check_detail": "DNS sem endereços públicos resolúveis"
+    },
+    {
+      "domain": "weg-auf-click.de",
+      "url": "https://weg-auf-click.de/",
+      "title": "Startseite – Meine Kreuzfahrtexperten UG(Haftungsbeschränkt)",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://weg-auf-click.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "weg-bank-staging.bold-ventures.de",
+      "url": "https://weg-bank-staging.bold-ventures.de/",
+      "title": "weg-bank-staging.bold-ventures.de",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 58,
+      "priority": "Média",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "O resumo menciona pagamentos ou dados financeiros",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "http://weg-bank-staging.bold-ventures.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "weg-bank.cms.bold-ventures.de",
+      "url": "https://weg-bank.cms.bold-ventures.de/",
+      "title": "Divisio | Startseite",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "http://weg-bank.cms.bold-ventures.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "weg-der-heiligkeit.de",
+      "url": "https://weg-der-heiligkeit.de/",
+      "title": "weg-der-heiligkeit.de",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://weg-der-heiligkeit.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "weg-der-liebe.de",
+      "url": "https://weg-der-liebe.de/",
+      "title": "weg-der-liebe.de",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg-*",
+      "score": 43,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "A marca WEG aparece no título ou resumo",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://weg-der-liebe.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wega0106.vot.pl",
+      "url": "https://wega0106.vot.pl/",
+      "title": "wega0106.vot.pl",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wega0106.vot.pl/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegcenter.uni-graz.at",
+      "url": "https://wegcenter.uni-graz.at/",
+      "title": "Wegener Center für Klima und Globalen Wandel",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wegcenter.uni-graz.at/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegenbelastingvrij.nl",
+      "url": "https://wegenbelastingvrij.nl/",
+      "title": "wegenbelastingvrij.nl is te koop",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 307,
+      "checked_url": "https://wegenbelastingvrij.nl/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
       "domain": "wegenergybodrum.com",
       "url": "https://wegenergybodrum.com/",
       "title": "wegenergybodrum.com",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -310,6 +1792,63 @@
       "site_status": "Redireciona",
       "http_status": 301,
       "checked_url": "http://wegenergybodrum.com/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegive.co.kr",
+      "url": "https://wegive.co.kr/",
+      "title": "고향사랑기부제 위기브",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegive.co.kr/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegivecomfort.org",
+      "url": "https://wegivecomfort.org/",
+      "title": "Index of /",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wegivecomfort.org/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegjdx.blogspot.dk",
+      "url": "https://wegjdx.blogspot.dk/",
+      "title": "get188.info",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegjdx.blogspot.dk/",
       "check_detail": "HTTP redireciona; destino não verificado"
     },
     {
@@ -389,12 +1928,89 @@
       "check_detail": "HTTP redireciona; destino não verificado"
     },
     {
+      "domain": "wegmueller-holzbau.ch",
+      "url": "https://wegmueller-holzbau.ch/",
+      "title": "Kreativ Media GmbH",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "http://wegmueller-holzbau.ch/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wego-core-eng.vercel.app",
+      "url": "https://wego-core-eng.vercel.app/",
+      "title": "404: NOT_FOUND",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 308,
+      "checked_url": "http://wego-core-eng.vercel.app/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegotthebiscuits.com",
+      "url": "https://wegotthebiscuits.com/",
+      "title": "FAME HOUSE",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegotthebiscuits.com/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegovy-anwalt.de",
+      "url": "https://wegovy-anwalt.de/",
+      "title": "Login to Usermin",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 53,
+      "priority": "Média",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "O resumo menciona autenticação, conta ou portal",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegovy-anwalt.de/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
       "domain": "wegportal.wohnbau-service.de",
       "url": "https://wegportal.wohnbau-service.de/",
       "title": "wegportal.wohnbau-service.de",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -412,8 +2028,8 @@
       "url": "https://wegportal24.de/",
       "title": "wegportal24.de",
       "description": "",
-      "source": "crt.sh (Certificate Transparency)",
-      "query": "Certificate Transparency",
+      "source": "Histórico",
+      "query": "Histórico",
       "score": 55,
       "priority": "Média",
       "signals": [
@@ -425,7 +2041,67 @@
       "http_status": 308,
       "checked_url": "https://wegportal24.de/",
       "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegqzx.blogspot.in",
+      "url": "https://wegqzx.blogspot.in/",
+      "title": "getk100.cc",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 302,
+      "checked_url": "https://wegqzx.blogspot.in/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegrocery-console.vercel.app",
+      "url": "https://wegrocery-console.vercel.app/",
+      "title": "Accesso · WeGrocery Console",
+      "description": "",
+      "source": "urlscan.io (public historical scan)",
+      "query": "page.domain.keyword:weg*",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 307,
+      "checked_url": "https://wegrocery-console.vercel.app/",
+      "check_detail": "HTTP redireciona; destino não verificado"
+    },
+    {
+      "domain": "wegsolutions.co.uk",
+      "url": "https://wegsolutions.co.uk/",
+      "title": "wegsolutions.co.uk",
+      "description": "",
+      "source": "crt.sh",
+      "query": "Certificate Transparency",
+      "score": 38,
+      "priority": "Baixa",
+      "signals": [
+        "O nome do domínio começa por WEG",
+        "Disponibilidade avaliada via DNS público e resposta HTTP sem descarregar o conteúdo"
+      ],
+      "status": "Requer validação humana",
+      "site_status": "Redireciona",
+      "http_status": 301,
+      "checked_url": "https://wegsolutions.co.uk/",
+      "check_detail": "HTTP redireciona; destino não verificado"
     }
   ],
-  "errors": []
+  "errors": [
+    "crt.sh (weg-%): TimeoutError: The read operation timed out",
+    "crt.sh (weg-connect%): HTTPError: HTTP Error 502: Bad Gateway"
+  ]
 }
