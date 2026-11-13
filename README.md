@@ -1,33 +1,28 @@
-# WEG Radar — Brand Impersonation Watch
+# WEG Radar — Domain impersonation monitoring (gratuito)
 
-Monitorização **gratuita**, passiva e preliminar de domínios que possam imitar a WEG. Não pesquisa notícias.
+Monitorização de domínios externos semelhantes à marca WEG, sem APIs pagas.
 
-## Fontes e custos
-- **crt.sh** — consultas públicas aos registos de Certificate Transparency (CT); não necessita de chave de API.
-- **GitHub Actions + GitHub Pages** — recolha diária e publicação estática, sujeitos aos limites do plano GitHub e à disponibilidade do serviço.
-- **Não necessita de Brave, subscrições ou APIs pagas.**
+## Novidades
+- Descoberta via Certificate Transparency (crt.sh), incluindo pesquisas para variantes como `weg-connect`.
+- Ficheiro `data/known_domains.txt` para acrescentar nomes a verificar em cada execução, por exemplo `weg-connect.kz`.
+- Verificação de resolução DNS para IPs públicos e resposta HTTP/HTTPS, sem descarregar o corpo das páginas.
+- Dashboard apresenta por defeito apenas domínios com resposta HTTP 2xx ("Ativos").
+- Um filtro permite consultar "Redireciona", "Acesso restrito" e "Inacessível".
+- Histórico dos candidatos para voltar a verificar domínios na recolha seguinte.
 
-## Como funciona
-1. Consulta registos públicos de certificados emitidos para nomes que contenham `weg`.
-2. Exclui `weg.net`, os seus subdomínios e outros domínios expressamente confiáveis.
-3. Filtra nomes de notícias, redes sociais e outros sites irrelevantes.
-4. Classifica candidatos segundo semelhança do nome do domínio. A prioridade máxima nesta modalidade é **Média**.
-5. Apresenta o domínio e sinais de triagem no dashboard. Os URLs são **inferidos** a partir dos nomes encontrados nos certificados e **não foram visitados/confirmados**.
+## Deploy
+GitHub Pages: https://pmram.github.io/weg-external-radar./
 
-**Um certificado não prova que o site esteja ativo ou seja fraudulento.** Pode tratar-se de um distribuidor legítimo, um certificado antigo ou um nome não utilizado. É obrigatória validação humana antes de qualquer ação.
+GitHub Actions executa a pesquisa diariamente às 07:13 UTC; também podes usar Run workflow.
 
-## Configuração
-1. Confirmar **Settings → Pages → Source: GitHub Actions**.
-2. Abrir **Actions → Scan public web → Run workflow** para uma pesquisa manual.
-3. A execução automática ocorre diariamente às 07:13 UTC.
-4. Abrir https://pmram.github.io/weg-external-radar./
-5. Opcional: em **Settings → Secrets and variables → Actions → Variables** criar `TRUSTED_DOMAINS` com lista de domínios oficiais verificados, separados por vírgulas.
+## Segurança e limites
+- "Ativo" significa **resposta HTTP 2xx no momento da verificação**, não que seja um site funcional, legítimo, fraudulento ou que se faça passar pela WEG.
+- Redirecionamentos não são seguidos; aparecem numa categoria distinta.
+- O scanner restringe as ligações a IPs públicos, aplica timeout e limita paralelismo e número de candidatos.
+- Sites geograficamente restritos, protegidos por bot protection ou que exijam autenticação podem não aparecer entre os ativos.
+- Os resultados de Certificate Transparency são incompletos e o crt.sh pode falhar temporariamente.
+- `weg.net` e subdomínios são excluídos; outros domínios oficiais exigem uma lista verificada em `TRUSTED_DOMAINS`.
+- Para identificar verdadeiras páginas de impersonação ainda será necessário inspeção segura do conteúdo e validação humana.
 
-Não é necessário criar nem configurar `BRAVE_SEARCH_API_KEY`.
-
-## Limitações
-- CT cobre nomes que apareceram em certificados públicos, não a totalidade da Internet.
-- O serviço crt.sh pode estar temporariamente lento, indisponível ou limitar respostas grandes.
-- Esta versão não confirma conteúdo, formulários, aparência gráfica, resolução DNS, atividade do site, proprietário ou intenção maliciosa.
-- A triagem não deteta toda a variedade de typosquatting.
-- A recolha é executada nas Actions, não no browser do visitante.
+## Adicionar candidatos
+Acrescenta uma linha em `data/known_domains.txt` por domínio. Cada alteração inicia nova recolha. São **indícios a verificar**, nunca acusações de fraude.
