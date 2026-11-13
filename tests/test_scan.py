@@ -25,6 +25,11 @@ class ScannerTests(unittest.TestCase):
         self.assertGreaterEqual(item["score"], 75)
     def test_unrelated_brand_word_not_enough(self):
         self.assertIsNone(assess(sample("https://newgeneration.example")))
+    def test_german_word_weg_is_not_brand(self):
+        self.assertIsNone(assess(sample('https://auf-dem-weg-zur-arbeit.example')))
+        self.assertIsNone(assess(sample('https://fett-weg-spritze.example')))
+    def test_weg_motors_candidate(self):
+        self.assertIsNotNone(assess(sample('https://wegmotors.example')))
     def test_invalid_scheme(self):
         self.assertEqual(hostname("javascript:alert(1)"), "")
     def test_auth_in_url_only_ignored(self):
