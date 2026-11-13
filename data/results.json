@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updated_at": "2026-11-13T21:00:15.656251+00:00",
+  "updated_at": "2026-11-13T21:03:13.487367+00:00",
   "provider": "crt.sh + urlscan.io público + DNS/HTTP (gratuito)",
   "notice": "A lista principal apresenta apenas endereços com resposta HTTP 2xx no momento da consulta. Isso não confirma que tenham aparência oficial nem que sejam fraudulentos. Redirecionamentos e sites inacessíveis ficam separados. Algumas pesquisas de certificados falharam. Nova camada: análise limitada do HTML inicial para referências a motores elétricos. A ausência de termos não prova ausência de conteúdo relevante.",
   "checked_queries": 12,
@@ -31,7 +31,8 @@
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
       "motor_status": "Referências a motores",
       "motor_terms": [
-        "electric motors"
+        "electric motors",
+        "WEG motors"
       ],
       "motor_detail": "Referências a motores elétricos detetadas no HTML público"
     },
@@ -82,7 +83,8 @@
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
       "motor_status": "Referências a motores",
       "motor_terms": [
-        "electric motors"
+        "electric motors",
+        "WEG motors"
       ],
       "motor_detail": "Referências a motores elétricos detetadas no HTML público"
     },
@@ -106,9 +108,9 @@
       "http_status": 200,
       "checked_url": "https://weggaintrasolution.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegenergy.com",
@@ -446,9 +448,9 @@
       "http_status": 206,
       "checked_url": "https://weg11-09eg.290ma9qt9.cc/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegenwild.be",
@@ -514,9 +516,9 @@
       "http_status": 200,
       "checked_url": "https://wegaimport.pl/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegamexiazai.org.cn",
@@ -577,7 +579,7 @@
       ],
       "status": "Requer validação humana",
       "site_status": "Ativo",
-      "http_status": 200,
+      "http_status": 206,
       "checked_url": "https://wegarant.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
       "motor_status": "Sem referências",
@@ -846,9 +848,9 @@
       "http_status": 200,
       "checked_url": "https://wegetreal.ca/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegfygfe.com",
@@ -912,9 +914,9 @@
       "http_status": 200,
       "checked_url": "https://wegirlsglobal.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "weglokocs.com",
@@ -1044,9 +1046,9 @@
       "http_status": 200,
       "checked_url": "https://wegocitypolice.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegohomeapparel.com",
@@ -1154,9 +1156,9 @@
       "http_status": 206,
       "checked_url": "https://wegosewkay.weebly.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegotfilters.com",
@@ -1176,9 +1178,9 @@
       "http_status": 200,
       "checked_url": "https://wegotfilters.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegotthiscovered.com",
@@ -1242,9 +1244,9 @@
       "http_status": 206,
       "checked_url": "https://wegovy-pill-prices.co.uk/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegoxplore.com",
@@ -1286,9 +1288,9 @@
       "http_status": 206,
       "checked_url": "https://wegrant.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegsolution.com",
@@ -1330,9 +1332,9 @@
       "http_status": 200,
       "checked_url": "https://wegterbrands.com/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegukrv.com.cn",
@@ -1374,9 +1376,9 @@
       "http_status": 206,
       "checked_url": "https://wegweiser.fachgerecht-bauen.de/",
       "check_detail": "Resposta HTTP bem-sucedida; conteúdo e identidade não verificados",
-      "motor_status": "Não verificado",
+      "motor_status": "Sem referências",
       "motor_terms": [],
-      "motor_detail": "HTML excede 128 KB"
+      "motor_detail": "Sem referências a motores no HTML inicial analisado"
     },
     {
       "domain": "wegym.com",
@@ -2449,7 +2451,10 @@
     }
   ],
   "errors": [
-    "crt.sh (wegmotor%): TimeoutError: The read operation timed out",
+    "crt.sh (weg-solut%): TimeoutError: The read operation timed out",
+    "crt.sh (wegconnect%): HTTPError: HTTP Error 404: Not Found",
+    "crt.sh (weg-connect%): HTTPError: HTTP Error 404: Not Found",
+    "crt.sh (%.weg.%): TimeoutError: The read operation timed out",
     "crt.sh (wegmotors%): HTTPError: HTTP Error 502: Bad Gateway",
     "crt.sh (wegmotores%): HTTPError: HTTP Error 502: Bad Gateway"
   ]
