@@ -3,7 +3,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scripts/scan.py'
+      - 'scripts/**'
+      - 'data/known_domains.txt'
       - 'tests/**'
       - '.github/workflows/scan.yml'
   workflow_dispatch:
