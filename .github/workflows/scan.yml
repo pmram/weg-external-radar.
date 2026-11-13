@@ -13,7 +13,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: web-scan
+  group: active-site-scan
   cancel-in-progress: true
 jobs:
   scan:
